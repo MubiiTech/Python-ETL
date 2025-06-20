@@ -1,19 +1,13 @@
 # Weather ETL Project
 
 ## Overview
-This project is a **Weather ETL (Extract, Transform, Load) pipeline** that fetches weather data from an API, processes it, and loads it into an SQLite database. The data includes information like temperature, humidity, wind speed, and more for different cities. The project follows a modular approach, with separate scripts for data extraction, transformation, and loading.
-
-## What Does It Do?
-This project performs the following steps:
-1. **Extract**: Fetches weather data from an external weather API (OpenWeatherMap).
-2. **Transform**: Converts the temperature from Kelvin to Celsius and flattens the nested data into a more suitable format for database storage.
-3. **Load**: Inserts the processed data into an SQLite database (`weather_data.db`), where the weather information is stored in a table.
+This project implements an **ETL (Extract, Transform, Load)** pipeline that fetches weather data from an API, processes it (transforms the temperature to Celsius), and loads it into an **SQLite database**. The data includes weather details such as temperature, humidity, and wind speed for multiple cities.
 
 ## Features
-- Extracts weather data for cities (currently supports fetching data for one city, e.g., London).
-- Transforms the temperature from Kelvin to Celsius.
-- Stores the transformed data in a local SQLite database (`weather_data.db`).
-- Modular ETL pipeline with separate scripts for **Extract**, **Transform**, and **Load**.
+- **Extract**: Fetches weather data from an external API (currently OpenWeatherMap) for multiple cities.
+- **Transform**: Converts temperature from **Kelvin to Celsius** and flattens the nested data into a suitable format for loading into the database.
+- **Load**: Loads the transformed data into an **SQLite database** (`weather_data.db`).
+- Supports handling weather data for **multiple cities** (currently London, New York, Tokyo).
 
 ## Tech Stack
 This project uses the following technologies and libraries:
@@ -36,6 +30,15 @@ This project uses the following technologies and libraries:
 ### Prerequisites
 1. **Python 3.x** should be installed on your local machine.
 2. A **weather API key** (e.g., from [OpenWeatherMap](https://openweathermap.org/)).
+
+### Steps to Run the Project Locally
+
+1. **Clone the Repository**:
+   Clone this repository to your local machine using the following command:
+   ```bash
+   git clone https://github.com/yourusername/Python-ETL.git
+   cd Python-ETL
+
 
 ### Steps to Run the Project Locally
 
